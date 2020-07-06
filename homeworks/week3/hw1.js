@@ -1,3 +1,4 @@
+// 印出星星
 function printStars(n) {
   let result = '';
   for (let i = 1; i <= n; i += 1) {
