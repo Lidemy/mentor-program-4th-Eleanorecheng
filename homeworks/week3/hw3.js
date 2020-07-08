@@ -1,4 +1,4 @@
-// 判斷質數
+// 判斷質數OK
 function isPrime(n) {
   const input = Number(n);
   if (input === 1) return false;

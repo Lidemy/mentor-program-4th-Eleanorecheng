@@ -1,4 +1,4 @@
-// 判斷迴文
+// 判斷迴文OK
 function isReversable(str) {
   let strReverse = '';
   for (let i = str.length - 1; i >= 0; i -= 1) {

@@ -1,3 +1,4 @@
+// 聯誼比大小OK
 function whoWin(arr) {
   const temp = arr.split(' ');
   let A = temp[0];
