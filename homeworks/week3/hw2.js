@@ -1,4 +1,4 @@
-// 水仙花數
+// 印出水仙花數
 function countDigits(input) {
   let n = input;
   if (n === 0) return 1; // 如果是零，回傳一位數

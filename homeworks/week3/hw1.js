@@ -1,4 +1,4 @@
-// 印出星星
+// 印出星星來
 function printStars(n) {
   let result = '';
   for (let i = 1; i <= n; i += 1) {
@@ -9,10 +9,8 @@ function printStars(n) {
   }
   return result;
 }
-
 function solve(lines) {
   const n = Number(lines[0]);
   console.log(printStars(n));
 }
-
 solve(['5']);
