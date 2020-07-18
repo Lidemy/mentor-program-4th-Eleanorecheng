@@ -34,9 +34,9 @@ Base URL : https://lidemy-restaruants.com/api
 
 |	說明	 | Method |		path		|			參數			    |		  範例		   |
 |------------|--------|-----------------|-------------------------------|----------------------|
-|獲取所有餐廳| GET    | /restaurants	| q:查詢餐廳			    	| /restaurants?q=鼎泰豐|
-|獲取單一餐廳| GET    | /restaurants/:id| 無            			    | /restaurant/12	   |
-|新增餐廳    | POST   | /restaurants    | name: 餐廳名稱, location: 台北| 無				   |
-|刪除餐廳    | DELETE | /restaurants/:id| 無         					| 無				   |
-|更改餐廳資訊| PATCH  | /restaurants/:id| name: 餐廳名稱, location: 台南| 無				   |
+|獲取所有餐廳| GET    | /restaurants	| q:查詢餐廳| /restaurants?q=鼎泰豐|
+|獲取單一餐廳| GET    | /restaurants/:id| 無| /restaurant/12|
+|新增餐廳    | POST   | /restaurants    | name: 餐廳名稱, location: 台北| 無|
+|刪除餐廳    | DELETE | /restaurants/:id| 無| 無				   |
+|更改餐廳資訊| PATCH  | /restaurants/:id| name: 餐廳名稱, location: 台南| 無|
 
