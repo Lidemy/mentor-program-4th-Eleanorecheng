@@ -8,7 +8,7 @@
 const request = require('request');
 const process = require('process');
 
-const baseURL = 'https://lidemy-book-store.herokuapp.com/books/';
+const baseURL = 'https://lidemy-book-store.herokuapp.com';
 const requestType = process.argv[2];
 const parameter = process.argv[3];
 
