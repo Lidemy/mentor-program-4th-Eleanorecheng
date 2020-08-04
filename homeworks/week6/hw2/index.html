@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>新拖延運動報名表單</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+  <style>
+      body{
+          background-color:#ffffff;
+      }
+      .wrapper{
+          max-width: 645px;
+          margin:0 auto; /*上下邊界為零、左右邊界則由瀏覽器自動調節（auto*/
+          border:1px solid rgba(0, 0, 0, 0.3);
+          background-color: #ffffff;
+          box-shadow: 1.8px 2.4px 5px;
+      }
+      .formTop{
+          background-color: #fad312;
+          height:8px;
+      }
+      .content{
+          margin:54px 40px;
+      }
+
+      .formName{
+          font-size: 36px;
+          font-weight: bold;
+      }
+      .formInfo{
+          list-style: none;
+          display:block;
+          margin: 20px 0;
+          padding: 0px;
+      }
+      .formInfo li{
+          font-size:14px;
+      }
+      .formInfo p{
+          font-size: 16px;
+          color: #e74149;
+      }
+      .content label{
+          margin-top:50px;
+          padding-top:20px;
+          font-size:20px;
+      }
+      .content span{
+          color:#e74149;
+      }
+      content input{
+          color:#afafaf;
+      }
+      .submit_btn{
+          width: 92px;
+          height:40px;
+          background-color:#fad312;
+          border-radius: 3px;
+          margin-top:30px;
+          border-width: 0px;
+      }
+  </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="formTop"></div>
+        <div class="content">
+            <div class="formName">新拖延運動報名表單</div>
+            <ul class="formInfo">
+                <li>活動日期：2020/12/10 ~ 2020/12/11</li>
+                <li>活動地點：台北市大安區新生南路二段1號</li>
+                <p>*必填</p><br>
+            </ul>
+        
+            <form action="">
+                <label for="name">暱稱 <span>*</span></label><br><br>
+                <input type="text" id="name" placeholder="您的回答"><br><br><br>
+
+                <label for="email">電子郵件 <span>*</span></label><br><br>
+                <input type="text" id="email" placeholder="您的電子郵件"><br><br><br>
+
+                <label for="name">手機號碼 <span>*</span></label><br><br>
+                <input type="text" id="number" placeholder="您的手機號碼"><br><br><br>
+
+                <label for="text">報名類型 <span>*</span></label><br><br>
+                    <input type="radio">  躺在床上用想像力實作<br><br>
+                    <input type="radio">  趴在地上滑手機找現成的<br><br><br>
+                <label for ="about">怎麼知道這個活動的？ <span>*</span></label><br><br>
+                <input type="text" id="about" placeholder="您的回答"><br><br><br>
+
+                <label for="other">其他</label><br><br>
+                對活動的一些建議<br><br>
+                <input type="text" name="other" placeholder="您的回答"></br><br><br>
+
+                <input type="submit" class="submit_btn" name="submit" value="提交"><br>
+            </form>  
+        </div> 
+    </div>
+
+</body>
+</html>
