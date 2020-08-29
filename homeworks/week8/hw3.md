@@ -10,8 +10,8 @@
 ### JSON with padding 利用 <script>特性達成跨來源請求，把 server 回傳值放在<script>中，透過 callback function 把資料給帶回來，不會受到同源政策限制。
 
 ## 要如何存取跨網域的 API？
-### (1) 使用CORS: Cords Origin Resource Sharing 跨來源資源共享，如果想要開啟跨來源 HTTP 請求時，必須調整 Header 中的`Access-Control-Allow-Origin` ，如果 Header 中包含發起 Request 的 Origin的話，即可存取跨來源的請求
+### (1) 使用 CORS: Cords Origin Resource Sharing 跨來源資源共享，如果想要開啟跨來源 HTTP 請求時，必須調整 Header 中的`Access-Control-Allow-Origin` ，如果 Header 中包含發起 Request 的 Origin的話，即可存取跨來源的請求
 ### (2) 使用 JSONP 透過 <script> tag 取得不同源的 server 資料
 
 ## 為什麼我們在第四週時沒碰到跨網域的問題，這週卻碰到了？
-### 因為第四週我們使用 node.js 發出 request 到 server ，沒有透過瀏覽器，因此沒有同源政策的限制，雖然都是使用 javascript 去跟 server request， 少了瀏覽器的限制才沒有跨網域的問題，不過透過瀏覽器會需要再依循其他規則。
+### 因為第四週我們使用 node.js 發出 request 到 server ，沒有透過瀏覽器，因此沒有同源政策的限制，雖然都是使用 javascript 去跟 server request， 少了瀏覽器的限制才沒有跨網域的問題。
