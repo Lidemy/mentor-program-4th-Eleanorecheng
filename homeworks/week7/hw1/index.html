@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>新拖延運動報名表單</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+  <style>
+      body{
+          background-color:rgba(0, 0, 0, 0.3);
+      }
+      .wrapper{
+          max-width: 645px;
+          margin:0 auto; /*上下邊界為零、左右邊界則由瀏覽器自動調節（auto*/
+          border:1px solid rgba(0, 0, 0, 0.3);
+          background-color: #ffffff;
+          box-shadow: 1.8px 2.4px 5px;
+          margin-top: 5%;
+          margin-bottom: 5%;
+      }
+      .formTop{
+          background-color: #fad312;
+          height:8px;
+      }
+      .content{
+          margin:54px 40px;
+      }
+
+      .formName{
+          font-size: 36px;
+          font-weight: bold;
+      }
+      .formInfo{
+          list-style: none;
+          display:block;
+          margin: 20px 0;
+          padding: 0px;
+          line-height: 25px;
+      }
+      .formInfo li{
+          font-size:14px;
+      }
+      .formInfo p{
+          font-size: 16px;
+          color: #e74149;
+      }
+      .formMain{
+          margin-top: 55px;
+      }
+      .formMain__title{
+          font-size:20px;
+      }
+      .formMain__reply{
+          margin-top: 0px;
+      }
+      .formMain__reply input::after{
+          border: solid 1px gray;
+          font-size: 16px;
+          padding:12px;
+      }
+
+      .formMain__error{
+          margin-top: 5px;
+          color: #e74149;
+          position:absolute;
+      }
+      .content span{
+          color:#e74149;
+      }
+      content input{
+          color:#afafaf;
+      }
+      .submit_btn{
+          width: 92px;
+          height:40px;
+          background-color:#fad312;
+          border-radius: 3px;
+          margin-top:30px;
+          border-width: 0px;
+          font-size: 15px;
+      }
+      .hide-error .formMain__error{
+          display: none;
+
+      }
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="formTop"></div>
+        <div class="content">
+            <div class="formName">新拖延運動報名表單</div>
+            <ul class="formInfo">
+                <li>活動日期：2020/12/10 ~ 2020/12/11</li>
+                <li>活動地點：台北市大安區新生南路二段1號</li>
+                <p>*必填</p>
+            </ul>
+            <form class="form" method="POST">
+                <div class="formMain">
+                    <div class="formMain__title">
+                        <label for="name">暱稱 <span>*</span></label><br><br>
+                    </div>
+                    <div class="formMain__reply">
+                        <input type="text" name="nickname" placeholder="您的回答"><br>
+                    </div>
+                    <div class="formMain__error hide-error">
+                        請輸入暱稱
+                    </div>
+                </div>
+
+                <div class="formMain">
+                    <div class="formMain__title">
+                        <label for="email">電子郵件 <span>*</span></label><br><br>
+                    </div>
+                    <div class="formMain__reply">
+                        <input type="text" name="email" placeholder="您的電子郵件"><br>
+                    </div>
+                    <div class="formMain__error hide-error">
+                        請輸入電子郵件
+                    </div>
+                </div>
+
+                <div class="formMain">
+                    <div class="formMain__title">
+                        <label for="number">手機號碼 <span>*</span></label><br><br>
+                    </div>
+                    <div class="formMain__reply">
+                        <input type="text" name="number" placeholder="您的手機號碼"><br>
+                    </div>
+                    <div class="formMain__error hide-error">
+                        請輸入手機號碼
+                    </div>
+                </div>
+
+                <div class="formMain">
+                    <div class="formMain__title">
+                        <label for="text">報名類型 <span>*</span></label><br><br>
+                    </div>
+                    <div class="formMain__reply">
+                        <input type="radio" name="radio">躺在床上用想像力實作<br><br>
+                        <input type="radio" name="radio">趴在地上滑手機找現成的<br>
+                    </div>
+                    <div class="formMain__error hide-error">
+                        請選擇一項
+                    </div>
+                </div>
+                <div class="formMain">
+                    <div class="formMain__title"> 
+                        <label for ="about">怎麼知道這個活動的？ <span>*</span></label><br><br>
+                    </div>
+                    <div class="formMain__reply">
+                        <input type="text" name="about" placeholder="您的回答"><br>
+                    </div>
+                    <div class="formMain__error hide-error">
+                        請輸入您的回答
+                    </div>
+                </div>
+                <div class="formMain">
+                    <div class="formMain__title"> 
+                        <label for="other">其他</label><br><br>
+                        對活動的一些建議<br><br>
+                    </div>
+                    <div class="formMain__reply notRequired"><!-- 注意最後一個“其他”非必填-->
+                        <input type="text" name="other" placeholder="您的回答"></br><br><br>
+                    </div>
+                </div>
+                <input type="submit" class="submit_btn" name="submit" value="提交"><br>
+            </form>  
+        </div> 
+    </div>
+    <footer>Copyright. All rights Reserved.</footer>
+</body>
+
+<script>
+    document.querySelector('form').addEventListener('submit',function(e) {
+        e.preventDefault()//阻止預設的送出行為
+        //抓取input 和 radio欄位
+        //檢查欄位是否都有填寫，把資料存到value以利最後alert使用
+        let isValid = false
+        let values={}
+        const inputs = document.querySelectorAll('.formMain__reply input[type = text]')
+        for (let input of inputs){
+            if(!input.value){
+                input.parentNode.parentNode.classList.remove('hide-error') 
+                isValid = false
+            }else{
+                input.parentNode.parentNode.classList.add('hide-error') 
+                isValid = true
+                values[input.name] = input.value
+            }
+        }
+
+        const radios = document.querySelectorAll('.formMain__reply input[type=radio]')
+        //console.log('radios',radios)
+        const ischecked = [...radios].some(radio => radio.checked) // some()檢查，只要radio有被勾選就是true
+        //console.log('ischecked',ischecked)
+        const checkedRadio = document.querySelector('input[type=radio]:checked')
+        console.log('checkedRadio',checkedRadio)
+        if(!checkedRadio){
+            checkedRadio.parentNode.parentNode.classList.remove('hide-error')
+            isValid = false
+        }else{
+            checkedRadio.parentNode.parentNode.classList.add('hide-error')
+            isValid = true
+            values[checkedRadio.name] = checkedRadio.value
+        }
+       
+       if(isValid){
+           alert(JSON.stringify(values))
+       }
+     
+    })
+</script>
+</html>
