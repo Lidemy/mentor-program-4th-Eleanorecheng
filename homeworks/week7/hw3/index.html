@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+       
+        <div class="titleName">To Do List</div>
+        <div class="add-section">
+            <input class="input-bar" type="text" class="input"/>
+            <button class="btn-new">Add</button>
+        </div>
+        <div class="todo-list">
+            <div class="todo">
+                <input class="todo__check" type="checkbox"/>
+                <div class="todo__title">寫作業</div>
+                <button class="btn-delete">Delete</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        //新增
+        document.querySelector('.btn-new').addEventListener('click', function(e) 
+        {
+            const value = document.querySelector('.input-bar').value;
+            if(value){
+                const div = document.createElement('div');
+            div.classList.add('todo');
+            div.innerHTML = 
+            `<input class="todo__check" type="checkbox"/>
+                <div class="todo__title">${value}</div>
+                <button class="btn-delete">Delete</button>`;
+
+            document.querySelector('.todo-list').appendChild(div);
+            document.querySelector('.input-bar').value = '';
+            } else {
+                return
+            }
+        })
+        //刪除 
+        //勾選
+        //用delegation
+        document.querySelector('.todo-list').addEventListener('click',function(e)
+        {
+            const tar = e.target
+            if(tar.classList.contains('btn-delete')){
+                tar.parentNode.remove()
+                console.log(tar) //class:btn-delete
+                console.log(tar.parentNode) // class: todo
+            }
+            if(tar.classList.contains('todo__check')){
+                console.log(tar.checked)
+                if(tar.checked){ //true
+                    tar.parentNode.classList.add('finish')
+                }else{
+                    tar.parentNode.classList.remove('finish')
+                }
+              
+            }
+        })
+       
+            
+
+    
+    </script>
+
+</body>
+</html>
