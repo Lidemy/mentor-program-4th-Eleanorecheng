@@ -1,0 +1,58 @@
+body{
+  margin:0 auto;
+  width:500px;
+}
+.wrapper{
+    padding:10px;
+    background: lemonchiffon;
+    width:500px;
+    height:500px;
+}
+.add-section{
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   margin-left: 30%;
+}
+.titleName{
+    font-size:48px;
+    font-weight: bold;
+    color:goldenrod;
+    text-align:center;
+}
+.input-bar{
+    height:25px;
+    border:solid 0;
+    border-bottom:solid 1px goldenrod;
+    background:lemonchiffon;
+}
+.input-bar:focus{
+    outline:none;
+}
+
+.btn-new, .btn-delete{
+    margin: 0 5px;
+    padding:10px;
+    background: goldenrod;
+    color:lemonchiffon;
+    border:solid 0;
+    border-radius: 5px;
+}
+
+.todo{
+    display: flex;
+    align-items: center;
+    margin:10px auto;
+}
+.todo__title{
+    flex: 1;
+}
+.todo__check{
+    width: 20px;
+    height:20px;
+    margin-right:10px;
+}
+
+.todo.finish .todo__title{
+    text-decoration: line-through;
+}
