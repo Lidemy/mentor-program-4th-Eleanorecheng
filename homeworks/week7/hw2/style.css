@@ -1,0 +1,227 @@
+body{
+    margin: 0 auto;
+    width: 100%;
+    height:100%
+}
+.navbar{
+    box-shadow: 1.4px 1.4px 6px 0 #97a2a0;
+    padding: 0px 24px; /*一定要加，尤其畫面縮小的時候會很明顯看出*/
+}
+.navbar .wrapper{
+    display:flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height:84px;
+    padding:0px 10px; /*???*/
+    background:white;
+}
+.wrapper{
+    max-width:1280px;  /* 最多1280px並且置中 */
+    margin:0 auto;
+    padding:0px 12px; /* 段落中文字在縮放的時候不會跟邊邊連在一起-*/
+}
+
+.navbar__name{
+    color:#489846;
+    font-size: 36px;
+}
+
+.navbar__list{ 
+    list-style: none; /* 移除list預設的點 */
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+}
+.navbar__list li{
+    margin-left: 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease-in;
+    padding:12px 20px; 
+}
+.navbar__list li.active, .navbar__list li:hover {  
+    background: #ff7286;
+}
+.navbar__list li.active a, .navbar__list li:hover a {
+    color:white;
+}
+.navbar__list li a{
+    display:block; /*inline的話padding-top會沒有反應 */
+    text-decoration: none;
+    color:black;
+}
+h2{
+    margin:0;
+}
+.section{
+    text-align: center;
+    margin-top:60px;
+}
+.section__title{
+    display: inline-block;
+    font-size: 36px;
+    border-left: solid 15px #a3dea2; /*綠色盒子*/
+    padding-left: 16px; /*綠色盒子與標題的距離*/
+    margin-bottom: 36px;
+}
+.section__questionList{
+    margin:0 auto;
+    max-width: 768px;
+}
+.section__question{
+    width:620px;
+    padding-bottom: 25px;
+    text-align:left;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    height:100px;
+    border-bottom: solid 1px #a6e2c0;
+}
+.section__question__hide{
+    height:15px; /*只顯示15px*/
+}
+.section__answer{
+    position:relative;
+    margin:10px auto;
+    padding-left: 40px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.question__number{
+    color:#70b282;
+    font-size: 24px;
+    text-align:left;
+    line-height: 24px;
+    margin-top: 10px;
+}
+.question__title{
+    color:#2e2d2d;
+    font-size:18px;
+}
+
+.section＿desc{
+    font-size: 16px;
+    line-height:2em;
+    margin: 0px 0px 68px 0px; /*--上右下左--*/
+}
+
+.buttons{
+   display:flex;
+   justify-content:center; 
+   align-items: center; 
+   font-size: 36px;
+   color:#3e613d;
+   cursor:pointer;
+   
+}
+
+.button__order{
+    padding:60px 80px;
+    background:#a8e8e1;
+    border-radius: 10px;
+}
+
+.button＿query{
+    padding:60px 80px;
+    background:#f9f9b5;
+    border-radius: 10px;
+    margin-left: 23px;
+}
+.section__images{
+    display:flex;
+    flex-direction: row;
+}
+.section__images div{
+    width:25%;
+}
+.section__images img{
+    width:100%;
+}
+
+
+@media(max-width: 768px){
+    .navbar .wrapper{
+      flex-direction: column;  /* 小餘768變成上下排*/
+      height:100px;
+      justify-content: space-between;
+      padding: 0px; /*縮到最小不用了*/
+    }
+    .navbar__list{
+      display:flex;
+      width: 100%; /*佔滿整個版面並均分*/
+        
+    }
+    .navbar__list li{
+      flex: 1;
+      margin-left: 0px;
+      border-radius: 0;
+      text-align: center;
+      padding:10px 10px;
+    }
+    .navbar__name{
+      margin-top: 10px;
+    }
+    .buttons{
+      display:inline-block;
+    }
+    .button＿query{
+      margin-left: 0px;
+      margin-top:16px;
+    }
+    .section__images{
+      flex-direction: column;
+    }
+    .section__images div{
+      width:100%
+    }
+    .footer__top .wrapper{
+        flex-direction: column-reverse;
+    }
+    .footer__info{
+        margin-right:0;
+        margin-top:16px;
+    }
+    .section__comments{
+        flex-direction: column;
+    }
+    .comments{
+        margin-right: 0px;
+    }
+    .comments__content{
+        position: relative;
+        margin-top: 70px;
+   }
+}
+
+  footer{
+      margin-top:48px;
+
+  }
+  .footer__top{
+      background:#e8efee;
+      padding:32px;
+      color:#484848;
+  }
+  .footer__bottom{
+      background: #35564b;
+      padding:12px;
+      text-align: center;
+      color:white;
+      font-size: 16px;
+  }
+  .footer__top .wrapper{
+      display: flex;
+      justify-content: space-between;
+  }
+  .footer__info{
+      margin-right:16px;
+  }
+  .footer__info div + div{ /*只有後面的div才會有maring 10 px*/
+      margin-top: 10px;
+  }
+  .footer__right{
+      color:#489846;
+      font-size: 36px;
+  }
